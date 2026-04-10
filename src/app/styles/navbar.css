@@ -1,0 +1,26 @@
+nav {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    margin: 0.4rem 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+}
+
+nav a:hover {
+    color: black;
+}

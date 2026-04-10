@@ -1,0 +1,44 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+model User {
+    id         Int        @id @default(autoincrement())
+    properties Property[]
+    email      String     @unique
+    name       String?
+    is_admin   Boolean    @default(false)
+    createdAt  DateTime   @default(now())
+
+    @@map("users")
+}
+
+
+model Property {
+    id            Int     @id @default(autoincrement())
+    userId        Int
+    user          User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+    title         String
+    description   String?
+    suburb        String?
+    district      String?
+    price         Int?
+    beds          Int?
+    baths         Int?
+    propertyType  String?
+    status        String?
+    internalNotes String?
+
+    @@map("property")
+
+    @@index([suburb])
+    @@index([propertyType])
+    @@index([status])
+}

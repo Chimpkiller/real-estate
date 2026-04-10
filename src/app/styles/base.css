@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+#main-container {
+    min-height: 100vh;
+    margin: 0 4rem;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+button {
+    height: fit-content;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    color: rgb(76, 76, 76);
+    padding: 0.7rem 0.5rem;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background-color: rgb(69, 74, 86);
+    color: white;
+    box-shadow: 5px 5px 5px rgb(88, 88, 88);
+    transform: translateY(-3px);
+}
+
+button:disabled {
+    background-color: rgb(168, 168, 168);
+    color: rgb(46, 46, 46);
+    box-shadow: none;
+    transform: translateY(0px);
+}
