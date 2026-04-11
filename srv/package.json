@@ -9,7 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "@prisma/config": "^7.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
     "next": "^14.0.0",
+    "pg": "^8.11.3",
+    "prisma": "^6.19.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
