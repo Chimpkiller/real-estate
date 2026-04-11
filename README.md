@@ -23,3 +23,15 @@ Navigate to the srv directory to install dependencies and set up the database.
 ```bash
 cd srv
 npm install
+
+# Install everything (Root, Frontend, and Backend)
+npm install && cd src && npm install && cd ../srv && npm install && cd ..
+
+# Setup Database (Inside /srv)
+cd srv
+npx prisma migrate dev --name init
+node db/data.js
+cd ..
+
+## Run the Application
+npm run dev
